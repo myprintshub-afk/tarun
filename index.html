@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fff8f0, #fce4ec);
+      color: #3d1f1f;
+      overflow-x: hidden;
+      animation: fadeIn 1.2s ease-in;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: maroon;
+      color: gold;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      animation: slideDown 1.2s ease-out;
+    }
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.2em;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+    header p {
+      font-size: 1.2em;
+    }
+    section {
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .photo-placeholder {
+      width: 200px;
+      height: 200px;
+      background: #fff;
+      border-radius: 50%;
+      margin: 20px auto;
+      border: 4px solid maroon;
+      background-image: url('images/bride-groom.jpg');
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      animation: fadeInUp 1.5s ease-out;
+    }
+    .countdown {
+      font-size: 2em;
+      font-weight: 600;
+      color: maroon;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); color: goldenrod; }
+      100% { transform: scale(1); }
+    }
+    .quote {
+      font-style: italic;
+      color: #555;
+      margin-top: 10px;
+    }
+    .event {
+      background: #fff;
+      margin: 20px auto;
+      padding: 25px;
+      border: none;
+      border-radius: 12px;
+      max-width: 500px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .event:hover {
+      transform: scale(1.03);
+    }
+    .event h3 {
+      color: maroon;
+      margin-bottom: 10px;
+    }
+    .whatsapp, .save-date {
+      display: inline-block;
+      margin: 15px 10px;
+      padding: 12px 22px;
+      background: maroon;
+      color: gold;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .whatsapp {
+      background: #25d366;
+      color: white;
+    }
+    .whatsapp:hover, .save-date:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 0.9em;
+      color: #444;
+      background: #fce4ec;
+      border-top: 1px solid #d4b59a;
+      margin-top: 30px;
+      animation: glowText 2s infinite alternate;
+    }
+    footer a {
+      color: maroon;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    @keyframes glowText {
+      0% { color: maroon; text-shadow: 0 0 5px gold; }
+      100% { color: goldenrod; text-shadow: 0 0 15px maroon; }
+    }
+    @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+    @keyframes slideDown { from {transform: translateY(-50px); opacity: 0;} to {transform: translateY(0); opacity: 1;} }
+    @keyframes fadeInUp { from {transform: translateY(40px); opacity: 0;} to {transform: translateY(0); opacity: 1;} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tarun & Sharmili</h1>
+    <p>We are tying the knot – and you are invited!</p>
+    <div class="photo-placeholder"></div>
+    <p>We seek your gracious presence and blessings<br>
+    on the auspicious occasion of our wedding.<br>
+    Your presence will make the day<br>
+    even more memorable and joyous for us.</p>
+  </header>
+
+  <section>
+    <h2>Countdown to Wedding</h2>
+    <div id="wedding-countdown" class="countdown"></div>
+    <p class="quote">“Two souls, one heart, bound together forever.”</p>
+  </section>
+
+  <section>
+    
+    <div class="event">
+      <h3>🕉️ Wedding Ceremony</h3>
+      <p>Date: 14th March 2026</p>
+      <p>Time: 09:06 AM</p>
+      <p>Venue: Swetha Gardens  </p>
+      <p><a href="https://maps.app.goo.gl/7njsQyfjz9FSyW5f7">📍 View Location</a></p>
+    </div>
+
+        <div class="event">
+      <h3>🕉️ Reception</h3>
+      <p>Date: 15th March 2026</p>
+      <p>Time: 7:00 PM</p>
+      <p>Venue: Tusker's Institute </p>
+      <p><a href="https://maps.app.goo.gl/gqkbZBRZWvBQq2n37">📍 View Location</a></p>
+    </div>
+
+    
+  </section>
+
+  <section>
+    <a href="https://wa.me/919866240326" target="_blank" class="whatsapp">📲 Contact on WhatsApp</a>
+    
+  </section>
+
+  <footer>
+    Crafted by <a href="https://share.google/v9wZ00VqkSyKDiZcJ" target="_blank">Mallikarjuna Wedding Cards</a> ✨
+  </footer>
+
+  <script>
+    // Wedding countdown
+    const weddingDate = new Date("Mar 14, 2026 09:06:00").getTime();
+    const x = setInterval(function() {
+      let now = new Date().getTime();
+      let distance = weddingDate - now;
+
+      let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      if (distance >= 0) {
+        document.getElementById("wedding-countdown").innerHTML =
+          days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+      } else {
+        clearInterval(x);
+        document.getElementById("wedding-countdown").innerHTML = "💍 The Wedding has begun!";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
